@@ -28,28 +28,30 @@ class Home extends StatelessWidget {
       body: Container(
           padding: EdgeInsets.all(10.0),
           margin: EdgeInsets.all(30.0),
-          color: Colors.grey[400],
+          color: Colors.grey[100],
           child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text('Fernando'),
-                RaisedButton.icon(
-                  onPressed: () {
-                    print('você clicou');
-                  },
-                  icon: Icon(Icons.mail_outline),
-                  label: Text('Clique aqui'),
-                  color: Colors.lightBlue,
-                ),
-                Container(
-                  color: Colors.cyan,
-                  padding: EdgeInsets.all(30.0),
-                  child: Text('Viel'),
-                )
-              ],
-            ),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Text('Fernando'),
+                  Text('Viel'),
+                  Container(
+                    padding: EdgeInsets.all(20.0),
+                    color: Colors.cyan,
+                    child: Text('um'),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(30.0),
+                    color: Colors.amber,
+                    child: Text('dois'),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(40.0),
+                    color: Colors.yellow,
+                    child: Text('três'),
+                  ),
+                ]),
           )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -59,89 +61,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-/*
-//Este widget é stateless, ou seja, ele nunca muda nada, o método uild dele é mais simples
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    //Funciona como um wrapper
-    return MaterialApp(
-      title: 'Demonstração Flutter',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: MyHomePage(title: 'Página inicial'),
-    );
-  }
-}
-
-//O que NÃO é alterável, armazeno aqui
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-
-
-  //Nos widgets Stateless implemento o método Build
-  //Nos widgets Statefull, implemento o 'createState()', e o meu estate é o desenhado. _MyHomePageState é o estado que eu vou criar
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-//Método que descreve o meu estado
-//O QUE É ALTERÁVEL, armazeno aqui
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  //String nome = "Fernando";
-
-  void _incrementCounter() {
-    //preciso chamar o setState, pra atualizar o estado do meu widget
-    setState(() {
-      _counter++;
-    });
-  }
-
-  void _decrementCounter() {
-    //preciso chamar o setState, pra atualizar o estado do meu widget
-    setState(() {
-      _counter--;
-    });
-  }
-
-
-//Build é renderizar tela, pois o estado altyerou
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text(widget.title),
-    ),
-    body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'You have pushed the button this many times:',
-          ),
-          Text(
-            'quantidade ${_counter}',
-            style: Theme
-                .of(context)
-                .textTheme
-                .headline4,
-          ),
-        ],
-      ),
-    ),
-
-    floatingActionButton: FloatingActionButton(
-      onPressed: _decrementCounter,
-      tooltip: 'Decrement',
-      child: Icon(Icons.add),
-    ),
-  );
-}}
-*/
