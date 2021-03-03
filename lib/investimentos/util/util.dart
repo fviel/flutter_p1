@@ -1,0 +1,5 @@
+
+enum TipoOrdem{
+  compra,
+  venda
+}
