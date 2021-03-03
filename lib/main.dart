@@ -32,10 +32,14 @@ class Home extends StatelessWidget {
           child: Center(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  Text('Fernando'),
-                  Text('Viel'),
+                  Row(
+                    children:<Widget>[
+                      Text('Fernando '),
+                      Text('Viel'),
+                    ]
+                  ),
                   Container(
                     padding: EdgeInsets.all(20.0),
                     color: Colors.cyan,
