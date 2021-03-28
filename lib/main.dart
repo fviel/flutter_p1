@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
     //return Container();
     return Scaffold(
         appBar: AppBar(
-          title: Text('Olá Fernando'),
+          title: Text('Olá Fernando '),
           centerTitle: true,
           backgroundColor: Colors.purple,
         ),
